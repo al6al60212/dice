@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB9E4E3928DEE7AF00AD4272 /* diceTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E4E3828DEE7AF00AD4272 /* diceTool.swift */; };
+		CB9E4E3B28DEF92E00AD4272 /* 搖骰聲.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB9E4E3A28DEF92E00AD4272 /* 搖骰聲.mp3 */; };
+		CB9E4E3D28E15E1800AD4272 /* choose.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9E4E3C28E15E1800AD4272 /* choose.swift */; };
 		CBC3BE5128DAA02700F40B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3BE5028DAA02700F40B30 /* AppDelegate.swift */; };
 		CBC3BE5328DAA02700F40B30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3BE5228DAA02700F40B30 /* SceneDelegate.swift */; };
 		CBC3BE5528DAA02700F40B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC3BE5428DAA02700F40B30 /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB9E4E3828DEE7AF00AD4272 /* diceTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = diceTool.swift; sourceTree = "<group>"; };
+		CB9E4E3A28DEF92E00AD4272 /* 搖骰聲.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "搖骰聲.mp3"; sourceTree = "<group>"; };
+		CB9E4E3C28E15E1800AD4272 /* choose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = choose.swift; sourceTree = "<group>"; };
 		CBC3BE4D28DAA02600F40B30 /* dice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC3BE5028DAA02700F40B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC3BE5228DAA02700F40B30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,10 +65,13 @@
 				CBC3BE5028DAA02700F40B30 /* AppDelegate.swift */,
 				CBC3BE5228DAA02700F40B30 /* SceneDelegate.swift */,
 				CBC3BE5428DAA02700F40B30 /* ViewController.swift */,
+				CB9E4E3828DEE7AF00AD4272 /* diceTool.swift */,
+				CB9E4E3C28E15E1800AD4272 /* choose.swift */,
 				CBC3BE5628DAA02700F40B30 /* Main.storyboard */,
 				CBC3BE5928DAA02800F40B30 /* Assets.xcassets */,
 				CBC3BE5B28DAA02800F40B30 /* LaunchScreen.storyboard */,
 				CBC3BE5E28DAA02800F40B30 /* Info.plist */,
+				CB9E4E3A28DEF92E00AD4272 /* 搖骰聲.mp3 */,
 			);
 			path = dice;
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9E4E3B28DEF92E00AD4272 /* 搖骰聲.mp3 in Resources */,
 				CBC3BE5D28DAA02800F40B30 /* LaunchScreen.storyboard in Resources */,
 				CBC3BE5A28DAA02800F40B30 /* Assets.xcassets in Resources */,
 				CBC3BE5828DAA02700F40B30 /* Main.storyboard in Resources */,
@@ -138,6 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9E4E3928DEE7AF00AD4272 /* diceTool.swift in Sources */,
+				CB9E4E3D28E15E1800AD4272 /* choose.swift in Sources */,
 				CBC3BE5528DAA02700F40B30 /* ViewController.swift in Sources */,
 				CBC3BE5128DAA02700F40B30 /* AppDelegate.swift in Sources */,
 				CBC3BE5328DAA02700F40B30 /* SceneDelegate.swift in Sources */,
