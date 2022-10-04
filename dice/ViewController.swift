@@ -24,19 +24,26 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
        if motion == .motionShake {
           rollDice()
+           
        }
     }
 
+
+    func voice(){
+        let url = Bundle.main.url(forResource: "搖骰聲", withExtension: "mp3")!
+        player = AVPlayer(url: url)
+        player?.play()
+    }
+    
     func rollDice(){
-        //
+        diceCup.shake()
+        dicePlate.shake()
+        dicePlate.transform = CGAffineTransform(rotationAngle: .pi / 180 * -2)
+        voice()
         let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotateAnimation.fromValue = 0
         rotateAnimation.toValue = Float.pi * 6
         rotateAnimation.duration = 1
-        
-        let diceVoice = Bundle.main.url(forResource: "搖骰聲", withExtension: "mp3")!
-        player = AVPlayer(url: diceVoice)
-        player?.play()
         
         for diceImageView in diceImageViews {
             let number = Int.random(in: 1...6)
@@ -63,3 +70,18 @@ class ViewController: UIViewController {
     
 }
 
+extension UIView {
+    func shake(times: Int = 5,deltaX : CGFloat = 10) {
+        let shakeAnimator = UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.1, delay: 0, options: [.curveEaseIn], animations: {
+            self.layer.setAffineTransform(CGAffineTransform(translationX: deltaX, y: 0))
+        })
+        { (_) in
+            if times != 0 {
+                self.shake(times: times - 1, deltaX: -deltaX)
+            } else {
+                self.layer.setAffineTransform(CGAffineTransform.identity)
+            }
+        }
+        shakeAnimator.startAnimation()
+    }
+}
